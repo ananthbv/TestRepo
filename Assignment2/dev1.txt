@@ -1,1 +1,29 @@
-dev1 txt first line
+Business Opportunity or Problem
+
+1.	Describe the business opportunity or problem(s) this project addressed and how it related to the (internal or external) client’s needs. 
+
+2.	Describe the scope and complexity of the problem. 
+
+3.	Describe your relationship and communications with client management / user management / end users. 
+
+Solution
+
+1.	Discuss your contribution to the solution, project or engagement including the rationale behind key choices.  Please enumerate the alternatives you considered and your reasons for their rejection.
+
+2.	Enumerate and describe the key decisions you made, and the reasons for making them as you did.
+
+3.	Describe the design method you used on this project and the rationale for its selection.
+
+4.	List the design tools you selected for use on this project and discuss the rationale for their selection.
+
+5.	List the major deliverables of the project that you were responsible for or contributed to, and summarize the reason for their inclusion.
+
+Results
+
+1.	Was your solution implemented?  If so, describe the role, if any, you had in the implementation.  If not explain why not.
+
+2.	Assess the overall success or failure of the project.  Comment on client satisfaction, attainment of objectives, and ultimate versus proposed cost and schedule.
+
+Lessons Learned 
+
+1. In retrospect, what might you have done differently on this project and what lessons did you learn?

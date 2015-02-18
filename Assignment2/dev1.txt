@@ -53,6 +53,21 @@ Solution
 1.	Discuss your contribution to the solution, project or engagement including the rationale behind key choices.  
 Please enumerate the alternatives you considered and your reasons for their rejection.
 My role in this project was Team Lead for the development of the Perl backend. This was the most critical part of the project.
+Some of my key contributions were:
+   a. Development of a backend server completely in Perl - We considered using other languages like C# or Java. Performance of 
+   both these landguages are not as good as Perl in file management. Also, having a solution in compiled languages 
+   meant more time spent in deployment of new updates and enhancements. Other interpreted languages like 
+   Python/PHP had even lesser number of modules for interacting with the file types mentioned above. Thus the best solution 
+   was in using Perl.
+   b. Development of a complete testing framework with Perl for the watermarking solution - 
+   c. Development of a new Perl module for editind MS Office Documents of OpenXML type (version 2007 and later). 
+   At the time of development, perl had no modules to edit OpenXML document. This meant we had to go with C# solution. 
+   But this also meant combining C# and Perl in the backend which would be a support team nightmare. I developed a solution
+   in Perl to do this. This solution is currently part of CPAN (Comprehensive Perl Archive Network),
+   the standard Perl repository for modules. Link: http://search.cpan.org/dist/OpenXML-Properties/lib/OpenXML/Properties.pm
+   
+
+2.	Enumerate and describe the key decisions you made, and the reasons for making them as you did.
 Some of my key decisions were:
 a. Develop a Perl daemon server that waits for documents to be uploaded instead of calling a perl script 
 for every document to be uploaded, thus saving a lot of system resources.
@@ -60,7 +75,6 @@ b. Communication between the web site and the perl server to happen through a MS
 The web site will send information about uploaded documents like path, type, etc., to the perl server through MSMQs.
 
 
-2.	Enumerate and describe the key decisions you made, and the reasons for making them as you did.
 
 3.	Describe the design method you used on this project and the rationale for its selection.
 

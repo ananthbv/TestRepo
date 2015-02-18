@@ -18,11 +18,7 @@ information about what LoB it is from and confidentiality level of the document.
 This tagging of documents was called 'watermarking' and is not related to the physical watermarking of documents.
 
 TCS was selected to come up with a solution where a user can upload a document to the watermarking server,
-get it watermarked, download it and then use it to share via email. The document could be any one of 
-a. MS Office documents 97-2003 versions to latest 2010 version, XPS documents
-b. PDF
-c. Audio/Video files - MP3, MP4, MPEG, etc.
-d. Image files - JPG, PNG, etc.
+get it watermarked, download it and then use it to share via email. 
 
 
 This was implemented by us by providing a web site  front-end developed in C#.NET and the 
@@ -32,14 +28,37 @@ watermarking server in the back-end developed in Perl.
 2.	Describe the scope and complexity of the problem. 
 
 Scope:
-a. All the document types should be watermarked
-b. The solution should be available at least 24x5 for JPMC employees all over the world.
+1. The document could be any one of 
+   a. MS Office documents 97-2003 versions to latest 2010 version, XPS documents
+   b. PDF
+   c. Audio/Video files - MP3, MP4, MPEG, etc.
+   d. Image files - JPG, PNG, etc.
+2. The solution should be available at least 24x5 for JPMC employees all over the world.
+
+Complexity:
+1. The watermarking solution was to be developed in Perl but was to be deployed on Windows servers. 
+With Perl being more of a UNIX tool, developing on windows was a difficult task. 
+2. For some document types, modules were available for writing to document properties but were not actively supported.
+3. For document types like MS Office 2010, modules were not available at all. We developed our own modules.
+
 
 3.	Describe your relationship and communications with client management / user management / end users. 
+My role in this project was as below:
+1. Discussing technical design decisions with JPMC Tech Lead.
+2. Weekly meetings with the client management providing status reports on the project
+3. 
 
 Solution
 
-1.	Discuss your contribution to the solution, project or engagement including the rationale behind key choices.  Please enumerate the alternatives you considered and your reasons for their rejection.
+1.	Discuss your contribution to the solution, project or engagement including the rationale behind key choices.  
+Please enumerate the alternatives you considered and your reasons for their rejection.
+My role in this project was Team Lead for the development of the Perl backend. This was the most critical part of the project.
+Some of my key decisions were:
+a. Develop a Perl daemon server that waits for documents to be uploaded instead of calling a perl script 
+for every document to be uploaded, thus saving a lot of system resources.
+b. Communication between the web site and the perl server to happen through a MS Message Queue. 
+The web site will send information about uploaded documents like path, type, etc., to the perl server through MSMQs.
+
 
 2.	Enumerate and describe the key decisions you made, and the reasons for making them as you did.
 

@@ -38,7 +38,8 @@ Scope:
 Complexity:
 1. The watermarking solution was to be developed in Perl but was to be deployed on Windows servers. 
 With Perl being more of a UNIX tool, developing on windows was a difficult task. 
-2. For some document types, modules were available for writing to document properties but were not actively supported.
+2. For some document types, modules were available for writing to document properties but was buggy 
+and not actively supported.
 3. For document types like MS Office 2010, modules were not available at all. We developed our own modules.
 
 
@@ -80,7 +81,8 @@ The web site will send information about uploaded documents like path, type, etc
 
 4.	List the design tools you selected for use on this project and discuss the rationale for their selection.
 
-5.	List the major deliverables of the project that you were responsible for or contributed to, and summarize the reason for their inclusion.
+5.	List the major deliverables of the project that you were responsible for or contributed to, and 
+summarize the reason for their inclusion.
 
 Results
 

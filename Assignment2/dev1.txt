@@ -1,21 +1,39 @@
 Business Opportunity or Problem
 
-1.	Describe the business opportunity or problem(s) this project addressed and how it related to the (internal or external) client’s needs. 
-
-JPMC's IT Risk and Security Management wanted to install Symantec Data Loss Prevention tool on their email servers.
+1.	Describe the business opportunity or problem(s) this project addressed and how it related to the 
+(internal or external) client’s needs. 
 
 JPMC had various Lines of Businesses, which were separate entities within the organisation, 
 Ex: Investment Banking, Equity Research, IT Risk and Security Management, etc.
 
 Since the LoBs were separate entities, high risk LoBs (Ex: Research) wanted to monitor sharing of documents though email
 (either intentionally or by accident) with other low risk LoBs and block high confidentiality documents, 
-if they were being shared.
-The DLP server would block all attachments in emails going out to email ids in other LoBs, unless it was 'watermarked', i.e., 
-unless the document tagged with some information about the confidentiality level of the document. 
+if they were being shared. JPMC's IT Risk and Security Management wanted to install Symantec Data Loss Prevention tool on
+their email servers to do this. The DLP server would be configured block all attachments in emails going out to email ids in other LoBs and 
+above certain threshold of confidentiality levels. 
 
+As part of this initiative, JPMC needed a way of tagging the documents with 
+information about what LoB it is from and confidentiality level of the document.
+
+This tagging of documents was called 'watermarking' and is not related to the physical watermarking of documents.
+
+TCS was selected to come up with a solution where a user can upload a document to the watermarking server,
+get it watermarked, download it and then use it to share via email. The document could be any one of 
+a. MS Office documents 97-2003 versions to latest 2010 version, XPS documents
+b. PDF
+c. Audio/Video files - MP3, MP4, MPEG, etc.
+d. Image files - JPG, PNG, etc.
+
+
+This was implemented by us by providing a web site  front-end developed in C#.NET and the 
+watermarking server in the back-end developed in Perl.
 
 
 2.	Describe the scope and complexity of the problem. 
+
+Scope:
+a. All the document types should be watermarked
+b. The solution should be available at least 24x5 for JPMC employees all over the world.
 
 3.	Describe your relationship and communications with client management / user management / end users. 
 

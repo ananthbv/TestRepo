@@ -2,6 +2,19 @@ Business Opportunity or Problem
 
 1.	Describe the business opportunity or problem(s) this project addressed and how it related to the (internal or external) client’s needs. 
 
+JPMC's IT Risk and Security Management wanted to install Symantec Data Loss Prevention tool on their email servers.
+
+JPMC had various Lines of Businesses, which were separate entities within the organisation, 
+Ex: Investment Banking, Equity Research, IT Risk and Security Management, etc.
+
+Since the LoBs were separate entities, high risk LoBs (Ex: Research) wanted to monitor sharing of documents though email
+(either intentionally or by accident) with other low risk LoBs and block high confidentiality documents, 
+if they were being shared.
+The DLP server would block all attachments in emails going out to email ids in other LoBs, unless it was 'watermarked', i.e., 
+unless the document tagged with some information about the confidentiality level of the document. 
+
+
+
 2.	Describe the scope and complexity of the problem. 
 
 3.	Describe your relationship and communications with client management / user management / end users. 

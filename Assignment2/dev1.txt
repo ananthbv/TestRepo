@@ -9,8 +9,8 @@ Ex: Investment Banking, Equity Research, IT Risk and Security Management, etc.
 Since the LoBs were separate entities, high risk LoBs (Ex: Research) wanted to monitor sharing of documents though email
 (either intentionally or by accident) with other low risk LoBs and block high confidentiality documents, 
 if they were being shared. JPMC's IT Risk and Security Management wanted to install Symantec Data Loss Prevention tool on
-their email servers to do this. The DLP server would be configured block all attachments in emails going out to email ids in other LoBs and 
-above certain threshold of confidentiality levels. 
+their email servers to do this. The DLP server would be configured block all attachments in emails going out to email 
+ids in other LoBs and above certain threshold of confidentiality levels. 
 
 As part of this initiative, JPMC needed a way of tagging the documents with 
 information about what LoB it is from and confidentiality level of the document.
@@ -70,7 +70,7 @@ Some of my key contributions were:
 2.	Enumerate and describe the key decisions you made, and the reasons for making them as you did.
 Some of my key decisions were:
 a. Develop a Perl daemon server that waits for documents to be uploaded instead of calling a perl script 
-for every document to be uploaded, thus saving a lot of system resources.
+for every document that was uploaded, thus saving a lot of system resources.
 b. Communication between the web site and the perl server to happen through a MS Message Queue. 
 The web site will send information about uploaded documents like path, type, etc., to the perl server through MSMQs.
 

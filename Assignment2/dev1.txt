@@ -61,11 +61,13 @@ Some of my key contributions were:
    Python/PHP had even lesser number of modules for interacting with the file types mentioned above. Thus the best solution 
    was in using Perl.
    b. Development of a complete testing framework with Perl for the watermarking solution - 
-   c. Development of a new Perl module for editind MS Office Documents of OpenXML type (version 2007 and later). 
-   At the time of development, perl had no modules to edit OpenXML document. This meant we had to go with C# solution. 
-   But this also meant combining C# and Perl in the backend which would be a support team nightmare. I developed a solution
-   in Perl to do this. This solution is currently part of CPAN (Comprehensive Perl Archive Network),
-   the standard Perl repository for modules. Link: http://search.cpan.org/dist/OpenXML-Properties/lib/OpenXML/Properties.pm
+   c. Development of a new Perl module for editing properties of MS Office Documents of OpenXML type (version 2007 and later). 
+   At the time of development, perl had no modules to edit OpenXML document. The only possible solution was to go with 
+   This meant we had to go with C#.  
+   But this also meant combining C# and Perl in the backend which would be a support team nightmare. So, I developed a 
+   solution in Perl to do this by going through OpenXML specification. This solution is currently part of CPAN (Comprehensive 
+   Perl Archive Network), the standard Perl repository for modules. 
+   Link: http://search.cpan.org/dist/OpenXML-Properties/lib/OpenXML/Properties.pm
    
 
 2.	Enumerate and describe the key decisions you made, and the reasons for making them as you did.
@@ -73,16 +75,31 @@ Some of my key decisions were:
 a. Develop a Perl daemon server that waits for documents to be uploaded instead of calling a perl script 
 for every document that was uploaded, thus saving a lot of system resources.
 b. Communication between the web site and the perl server to happen through a MS Message Queue. 
-The web site will send information about uploaded documents like path, type, etc., to the perl server through MSMQs.
+The web site will send information about uploaded documents like path, type, etc., to the perl server through MSMQs. This ensured a 
+continuous communication between the front-end and the watermarking server.
 
 
 
 3.	Describe the design method you used on this project and the rationale for its selection.
+Perl code was divided into server and watermarking modules. 
+The Server: For each upload of a set files, the server would spawn a separate process to watermark the files. The process 
+would go through the list of files and call appropriate modules to watermark.
+Code to watermark each type of documents was separated out into modules. For example, we had separate modules for 
+MS Office 2007 and later version documents, MS Office 97-2003 documents, PDF documents, Audio files, Video files 
+and Image files. 
+
 
 4.	List the design tools you selected for use on this project and discuss the rationale for their selection.
 
 5.	List the major deliverables of the project that you were responsible for or contributed to, and 
 summarize the reason for their inclusion.
+   a. Perl Watermarking server design document
+   b. Code for the perl watermarking server, 
+   c. Server deployment instructions
+   d. Test cases
+   e. Test Plan and Test Strategy documents
+   f. Support document
+   
 
 Results
 

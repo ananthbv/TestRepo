@@ -110,3 +110,11 @@ Results
 Lessons Learned 
 
 1. In retrospect, what might you have done differently on this project and what lessons did you learn?
+   We spent quite a bit of time in finding ways to make the interaction between C#.NET and Perl work. In addition 
+   to that, developing with Perl on windows meant that developing simple things like a daemon, which is trivial 
+   on UNIX, became a major task on windows.
+   In hindsight, we should have developed the whole solution, front-end and back-end, either completely in
+   Perl on UNIX or completely in .NET on Windows. Mixing of technologies, though a wonderful learning experience, 
+   was not hassle free.
+   Unfortunately, the custormer wanted a .NET front-end and a scripting language based back-end, for which 
+   Perl was the best choice.

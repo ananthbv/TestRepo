@@ -1,1 +1,29 @@
-dev2 txt first line
+Software Design Assignment
+
+In this assignment, you are requested to create a software design for a Payment and Rewards Management System for Mobile Stalls (e.g., a weekly farmers market's stall), whose requirements are listed below. To do so, please follow the same approach that we present in the P3L2 lesson, that is, analyze the requirements to identify and refine (1) classes, (2) attributes, (3) operations, and (4) relationships in your design.
+Requirements
+The stall manager uses the system to (1) add and edit customers, (2) process and keep track of payments, and (3) manage rewards. (For simplicity, we assume that the manager is the only person working at the stall and using the system.)
+A customer in the system is characterized by the following information:
+First name
+Last name
+Zip code
+Email address
+All payments must be performed using a credit card. No cash payments are allowed.
+A credit card scanner attached to the system allows the system to read, when a card is swiped, (1) the cardholder’s name, (2) the card’s account number, (3) the card's expiration date, and (4) the card's security code.
+Similarly, the system's hardware is capable to connect with a payment-processing service provider that can process credit card transactions.
+Every time a customer spends $100 or more in a single purchase, he or she gets a $10 discount towards a future purchase as a reward. The discount does not expire and is cumulative.
+The system should send an email to a customer when he or she gets a reward.
+Customers who spend $1000 or more in a calendar year achieve "gold" status, which entitles them to a 5% discount for life and on every purchase. The change of status is effective immediately after reaching the specified threshold. The 5% discount is applied before any other discount.
+The system should send an email to a customer when he or she achieves "gold" status.
+At any particular  point in time, the stall manager should be able to display, for any customer in the system, a list of their transactions. For each transaction, the stall manager should be able to see (1) date, (2) amount, and (3) whether discounts were applied (and which ones).
+Your design should be expressed using a UML class diagram, and the level of detail of the design should be analogous to the level of detail we used in the P3L2 lesson. If needed, you can also provide an optional additional document, in which you provide additional information about your design, such as assumptions or rationale for some design decisions.
+
+In case you are not familiar with any UML tool, one option is to use ArgoUML, which is a free UML editor. (If you are using the VM we provided, ArgoUML is already installed).
+
+To submit your assignment, you should do the following:
+Create a directory called Assignment5 in the usual personal GitHub repository we assigned to you.
+Save your UML class diagram in the Assignment5 directory as a PDF file named design.pdf.
+If you created the additional information file, save it in the same directory in markdown format and name it design-info.md.
+Commit and push your file(s) to your remote repository.
+Submit the commit ID for the files on T-Square.
+
